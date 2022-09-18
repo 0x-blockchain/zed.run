@@ -1,0 +1,6 @@
+.sub-button__elastic-text {
+  transition: width 0.6s ease-in;
+}
+.snackbar-item__container {
+  pointer-events: all;
+}

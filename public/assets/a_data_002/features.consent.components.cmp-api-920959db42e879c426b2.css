@@ -1,0 +1,26 @@
+.consent-modal {
+  max-width: 80rem;
+}
+.settings-form-group {
+  width: 100%;
+}
+.settings-row--focused {
+  border: 1px solid #772ce8;
+}
+.tw-root--theme-dark .settings-row--focused {
+  border: 1px solid #a970ff;
+}
+.tw-root--theme-light .settings-row--focused {
+  border: 1px solid #772ce8;
+}
+.modal__close-button {
+  left: 100%;
+  margin-left: 0.5rem;
+  position: absolute;
+  top: 0;
+}
+.modal__close-button--inset {
+  left: auto;
+  right: 1rem;
+  top: 1rem;
+}

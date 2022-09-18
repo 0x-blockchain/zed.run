@@ -1,0 +1,18 @@
+import { useStore } from "effector-react";
+import { $tokensFiltered } from "./wallet.erc20.store";
+
+const useTokenCollection = () => useStore($tokensFiltered);
+const usePriciestToken = () => {
+  const tokenCollection = useTokenCollection();
+  if (tokenCollection.length) {
+    return tokenCollection.reduce((prev, current) =>
+      prev.balance * prev.price > current.balance * current.price
+        ? prev
+        : current
+    );
+  }
+};
+
+export const selectors = {
+  usePriciestToken,
+};

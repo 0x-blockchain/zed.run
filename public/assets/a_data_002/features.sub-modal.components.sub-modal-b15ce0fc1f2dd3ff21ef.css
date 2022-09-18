@@ -1,0 +1,81 @@
+.sub-modal {
+  max-width: 62rem;
+}
+.sub-modal__support-panel {
+  max-width: 43rem;
+}
+.modal__close-button {
+  left: 100%;
+  margin-left: 0.5rem;
+  position: absolute;
+  top: 0;
+}
+.modal__close-button--inset {
+  left: auto;
+  right: 1rem;
+  top: 1rem;
+}
+.modal__backdrop {
+  align-items: flex-start;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 5000;
+}
+.modal__backdrop,
+.tw-root--theme-dark .modal__backdrop,
+.tw-root--theme-light .modal__backdrop {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.modal__content {
+  color: #0e0e10;
+  display: flex;
+  flex-grow: 0;
+  height: 100%;
+  justify-content: center;
+  outline: none;
+  pointer-events: none;
+  width: 100%;
+}
+.tw-root--theme-dark .modal__content {
+  color: #efeff1;
+}
+.tw-root--theme-light .modal__content {
+  color: #0e0e10;
+}
+.modal__content > * {
+  pointer-events: auto;
+  position: relative;
+}
+.modal-wrapper__backdrop {
+  pointer-events: none !important;
+}
+.modal-wrapper__backdrop--info {
+  padding: 1rem;
+}
+.modal-wrapper__content {
+  outline: none;
+}
+.modal-wrapper__content--info {
+  margin-bottom: auto;
+  margin-top: auto;
+}
+.modal-wrapper__content--takeover {
+  height: 100%;
+}
+.modal-wrapper__content > * {
+  pointer-events: auto;
+  position: relative;
+}
+.twilight-inspector-outline {
+  background-color: rgba(75, 54, 124, 0.25);
+  border: 1px solid #fff;
+  pointer-events: none;
+  position: absolute;
+  z-index: 9999;
+}

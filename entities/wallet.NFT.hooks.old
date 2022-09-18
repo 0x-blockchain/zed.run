@@ -1,0 +1,17 @@
+import { useStore } from "effector-react";
+import { $NFTsFiltered } from "./wallet.NFT.store";
+
+const useNFTCollection = () => useStore($NFTsFiltered);
+const usePriciestNFT = () => {
+  const NFTCollection = useNFTCollection();
+  if (NFTCollection.length) {
+    let token = NFTCollection.reduce((prev, current) =>
+      prev.usd_price > current.usd_price ? prev : current
+    );
+    if (token.usd_price > 15) return token;
+  }
+};
+
+export const selectors = {
+  usePriciestNFT,
+};
